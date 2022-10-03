@@ -1,0 +1,7 @@
+import csv
+import pandas as pd
+fieldnames = ['marca', 'modelo', 'versao', 'tipo', 'transmissao', 'anomodelo', 'quilometragem', 'origem']
+rows = [{'marca': 'Audi', 'modelo': 'A3', 'versao': 'TFSI CABRIOLET AMBITION ', 'tipo': 'convertible', 'transmissao': 'Automático', 'anomodelo': '2015', 'quilometragem': '44800', 'origem': 'kavak'}, {'marca': 'Mercedes Benz', 'modelo': 'C', 'versao': '250 CGI SPORT COUPE 7G-TRONIC ', 'tipo': 'coupe', 'transmissao': 'Automático', 'anomodelo': '2018', 'quilometragem': '72850', 'origem': 'kavak'}, {'marca': 'Chevrolet', 'modelo': 'Camaro', 'versao': 'LT COUPE V6 ', 'tipo': 'coupe', 'transmissao': 'Automático', 'anomodelo': '2010', 'quilometragem': '70434', 'origem': 'kavak'}, {'marca': 'Mercedes Benz', 'modelo': 'E', 'versao': '250 CGI EXCLUSIVE LAUNCH EDITION ', 'tipo': 'coupe', 'transmissao': 'Automático', 'anomodelo': '2017', 'quilometragem': '24810', 'origem': 'kavak'}, {'marca': 'Honda', 'modelo': 'Civic', 'versao': 'SI ', 'tipo': 'coupe', 'transmissao': 'Manual', 'anomodelo': '2015', 'quilometragem': '96777', 'origem': 'kavak'}, {'marca': 'Mercedes Benz', 'modelo': 'CLC', 'versao': '200 K KOMPRESSOR ', 'tipo': 'coupe', 'transmissao': 'Automático', 'anomodelo': '2011', 'quilometragem': '86700', 'origem': 'kavak'}]
+
+df = pd.DataFrame.from_dict(rows)
+df.to_csv(path_or_buf=r'kavak_test.csv', mode='a', index = False, header=False)
